@@ -5,7 +5,7 @@ describe("ENSBCHReceiver", function () {
   before(async function () {
     this.DomainToken = await ethers.getContractFactory("DomainToken")
     this.DomainBar = await ethers.getContractFactory("DomainBar")
-    this.ENSBCHReceiverContract = await ethers.getContractFactory("ENSBCHReceiverContract");
+    this.ENSBCHReceiver = await ethers.getContractFactory("ENSBCHReceiver");
 
     this.signers = await ethers.getSigners()
     this.alice = this.signers[0]
@@ -16,7 +16,7 @@ describe("ENSBCHReceiver", function () {
   beforeEach(async function () {
     this.domain = await this.DomainToken.deploy(this.alice.address, "100")
     this.bar = await this.DomainBar.deploy(this.domain.address)
-    this.ensBchReceiver = await this.ENSBCHReceiverContract.deploy(
+    this.ensBchReceiver = await this.ENSBCHReceiver.deploy(
       this.domain.address,
       this.bar.address,
       this.router.address,

@@ -16,7 +16,11 @@ import "./tasks"
 import { HardhatUserConfig } from "hardhat/types"
 import { removeConsoleLog } from "hardhat-preprocessor"
 
-const accounts = [process.env.DEPLOYER_PRIVATE_KEY, process.env.DEV_PRIVATE_KEY]
+const accounts = [
+  process.env.DEPLOYER_PRIVATE_KEY,
+  process.env.DEV_PRIVATE_KEY,
+  process.env.VESTING_PRIVATE_KEY,
+]
 
 const config: HardhatUserConfig = {
   abiExporter: {
@@ -46,6 +50,9 @@ const config: HardhatUserConfig = {
       // dev address mainnet
       // 1: "",
     },
+    vesting: {
+      default: 2,
+    },
   },
   networks: {
     localhost: {
@@ -72,7 +79,7 @@ const config: HardhatUserConfig = {
       gasMultiplier: 2,
     },
     "smartbch-amber": {
-      url: "https://moeing.tech:9545",
+      url: "http://35.220.203.194:8545",
       accounts,
       chainId: 10001,
       live: true,
