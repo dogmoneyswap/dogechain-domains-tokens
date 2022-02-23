@@ -30,6 +30,7 @@ async function snapshot(targetBlockNumber) {
   }
 
   const now = await currentBlockNumber();
+  console.log(now)
   const scanBlockStop = targetBlockNumber || now;
 
   // block batching size 10000 is maximum
@@ -76,18 +77,22 @@ async function snapshot(targetBlockNumber) {
     }
   }
 
-  let totalSupply = new ethers.BigNumber.from("0");
-  for (const [_, balance] of Object.entries(object1)) {
-    totalSupply = totalSupply.plus(balance);
+  let totalSupply = ethers.BigNumber.from("0");
+  for (const [_, balance] of Object.entries(balanceMap)) {
+    totalSupply = totalSupply.add(balance);
+  }
+  totalSupply = parseFloat(totalSupply.toString());
+
+  let totalAmount = ethers.BigNumber.from("0");
+  for (const [account, balance] of Object.entries(balanceMap)) {
+    // TODO test this
+    const share = totalSupply / parseFloat(balance.toString());
+    const amount = ethers.BigNumber.from(parseInt(50000000000000 / share, 10)).mul("1000000000");
+    totalAmount = totalAmount.add(amount);
+    console.log(`npx hardhat --network smartbch-amber erc20:transfer --recipient "${account}" --token "DOMAINTOKEN" --amount "${amount.toString()}"`);
   }
 
-  for (const [account, balance] of Object.entries(object1)) {
-    // TODO test this
-    const share = totalSupply.mul(new ethers.BigNumber("1000000000000")).div(balance);
-    const amount = ethers.BigNumber.from("50000000000000000000000").div(share).div("1000000000000");
-    console.log(`npx hardhat --network smartbch-amber erc20:transfer --recipient "${account}" --token "DOMAINTOKEN" --amount "${amount}"`);
-  }
   return balanceMap;
 }
 
-module.exports = snapshot;
+module.exports = async () => snapshot(1020000);
