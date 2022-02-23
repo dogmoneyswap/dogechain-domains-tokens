@@ -135,10 +135,10 @@ task("vesting:balance", "Check balance of stream on account")
     "0xeE85373F26E5380Fbd71FB7295BD68fdd0818887",
      require('../abi/ISablier.json')
   );
-  console.log('balance', (await (await sablier.connect(await getNamedSigner("dev")).balanceOf(
+  console.log('balance', ethers.utils.formatEther(await (await sablier.connect(await getNamedSigner("dev")).balanceOf(
     stream,
     account,
-  ))).toString());
+  ))));
 });
 
 task("vesting:withdraw", "Withdraw balance")
