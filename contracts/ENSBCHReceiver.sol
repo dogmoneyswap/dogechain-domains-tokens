@@ -53,7 +53,7 @@ contract ENSBCHReceiver is Ownable {
         return returnData;
     }
 
-    // Converts all held BCH to domain and sends to bar
+    // Converts BCH balance to domain and sends to bar
     function convert() public {
         // we do not care about price, so set this to minimum
         uint256 amountOutMin = 1;
