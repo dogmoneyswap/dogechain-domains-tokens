@@ -25,8 +25,6 @@ contract ENSBCHReceiver is Ownable {
         domain = IERC20(_domain);
         bar = _bar;
         router = UniswapV2Router02(_router);
-
-        domain.approve(address(router), type(uint256).max);
     }
 
     event Received(address, uint);
