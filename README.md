@@ -33,11 +33,14 @@ npx hardhat --network smartbch-amber converter:stake
 # set up vesting
 # update recipient addresses for mistswap and pat
 # python: ((250000 * 10 ** 18) // (365 * 24 * 60 * 60)) * (365 * 24 * 60 * 60) 
-npx hardhat --network smartbch-amber vesting:create --recipient "MISTSWAP_ADDRESS" --token "DOMAINTOKEN" --amount "249999999999999980256000" --timelength "31536000"
+# mistswap
+npx hardhat --network smartbch-amber vesting:create --recipient "0x07D4115bCDb2b709ff07d0dA11f5Da7D85C5b769" --token "DOMAINTOKEN" --amount "249999999999999980256000" --timelength "31536000"
+# pat
 npx hardhat --network smartbch-amber vesting:create --recipient "PAT_ADDRESS" --token "DOMAINTOKEN" --amount "249999999999999980256000" --timelength "31536000"
 
 # distribute to private sale
-npx hardhat --network smartbch-amber erc20:transfer --recipient "PRIVATE_SALE" --token "DOMAINTOKEN" --amount "50000000000000000000000"
+npx hardhat --network smartbch-amber erc20:transfer --recipient "0xbc903372c2860b7c1DA5454f69e6A580f562313e" --token "DOMAINTOKEN" --amount "40000000000000000000000"
+npx hardhat --network smartbch-amber erc20:transfer --recipient "0x35FB9645AF6AfF1107Eb210B4049b7AE0B510143" --token "DOMAINTOKEN" --amount "10000000000000000000000"
 
 # distribute to xmist holders
 npx hardhat --network smartbch-amber snapshot
