@@ -75,8 +75,8 @@ function encodeParameters(types, values) {
 
 task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
 .addParam("oldReceiver", "Account to transfer from")
-.setAction(async function ({ oldReceiver }, { ethers: { getNamedSigner } }, runSuper) {
-  const chainId = await ethers.getDefaultProvider().getNetwork().chainId;
+.setAction(async function ({ oldReceiver }, { getChainId, ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await getChainId();
 
   const nreceiver = await ethers.getContract("ENSBCHReceiver")
   const receiverFactory = await ethers.getContractFactory("ENSBCHReceiver")
@@ -97,8 +97,8 @@ task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
 });
 
 task("receiver:convert", "Convert bch to rebuy domain for domain bar")
-.setAction(async function ({ }, { ethers: { getNamedSigner } }, runSuper) {
-  const chainId = await ethers.getDefaultProvider().getNetwork().chainId;
+.setAction(async function ({ }, { getChainId, ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await getChainId();
 
   const receiver = await ethers.getContract("ENSBCHReceiver")
 
@@ -182,8 +182,8 @@ task("vesting:balance", "Check balance of stream on account")
 .setAction(async function ({
   stream,
   account,
-}, { ethers: { getNamedSigner } }, runSuper) {
-  const chainId = await ethers.getDefaultProvider().getNetwork().chainId;
+}, { getChainId, ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await getChainId();
 
   const sablier = new ethers.Contract(
     SABLIER_ADDRESS[chainId],
@@ -199,8 +199,8 @@ task("vesting:withdraw", "Withdraw balance")
 .addParam("stream", "Stream id")
 .setAction(async function ({
   stream,
-}, { ethers: { getNamedSigner } }, runSuper) {
-  const chainId = await ethers.getDefaultProvider().getNetwork().chainId;
+}, { getChainId, ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await getChainId();
 
   const sablier = new ethers.Contract(
       SABLIER_ADDRESS[chainId],
