@@ -3,6 +3,7 @@ const {
   MIST_ADDRESS,
   BAR_ADDRESS,
   SABLIER_ADDRESS,
+  ENS_REGISTRAR_ADDRESS,
 } = require('@mistswapdex/sdk');
 
 const { task } = require("hardhat/config")
@@ -75,10 +76,12 @@ function encodeParameters(types, values) {
 task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
 .addParam("oldReceiver", "Account to transfer from")
 .setAction(async function ({ oldReceiver }, { ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await ethers.getDefaultProvider().getNetwork().chainId;
+
   const nreceiver = await ethers.getContract("ENSBCHReceiver")
   const receiverFactory = await ethers.getContractFactory("ENSBCHReceiver")
   const receiver = receiverFactory.attach(oldReceiver)
-  const ETHRegistrarController = "0x0acaBb80b45e490e11c3b0513Ba0ad6bC6BF0A6A"; // TODO set from sdk
+  const ETHRegistrarController = ENS_REGISTRAR_ADDRESS[chainId];
   console.log('nreceiver address', nreceiver.address);
 
   const xfer = await (await receiver.connect(await getNamedSigner("dev")).callTarget(
@@ -95,9 +98,11 @@ task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
 
 task("receiver:convert", "Convert bch to rebuy domain for domain bar")
 .setAction(async function ({ }, { ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await ethers.getDefaultProvider().getNetwork().chainId;
+
   const receiver = await ethers.getContract("ENSBCHReceiver")
 
-  const ETHRegistrarController = "0x0acaBb80b45e490e11c3b0513Ba0ad6bC6BF0A6A"; // TODO set from sdk
+  const ETHRegistrarController = ENS_REGISTRAR_ADDRESS[chainId];
 
   const ethRegistrarBalance = await ethers.provider.getBalance(ETHRegistrarController);
   console.log('ethRegistrarBalance', ethRegistrarBalance.toString());
@@ -178,9 +183,10 @@ task("vesting:balance", "Check balance of stream on account")
   stream,
   account,
 }, { ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await ethers.getDefaultProvider().getNetwork().chainId;
+
   const sablier = new ethers.Contract(
-    // TODO make this SABLIER_ADDRESS
-    "0xeE85373F26E5380Fbd71FB7295BD68fdd0818887",
+    SABLIER_ADDRESS[chainId],
      require('../abi/ISablier.json')
   );
   console.log('balance', ethers.utils.formatEther(await (await sablier.connect(await getNamedSigner("dev")).balanceOf(
@@ -194,9 +200,10 @@ task("vesting:withdraw", "Withdraw balance")
 .setAction(async function ({
   stream,
 }, { ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await ethers.getDefaultProvider().getNetwork().chainId;
+
   const sablier = new ethers.Contract(
-    // TODO make this SABLIER_ADDRESS
-    "0xeE85373F26E5380Fbd71FB7295BD68fdd0818887",
+      SABLIER_ADDRESS[chainId],
      require('../abi/ISablier.json')
   );
   const balance = (await (await sablier.connect(await getNamedSigner("dev")).balanceOf(
