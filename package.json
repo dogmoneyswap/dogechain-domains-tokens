@@ -1,9 +1,9 @@
 {
-  "name": "@mistswapdex/core",
+  "name": "@bchdomains/bch-domains-tokens",
   "version": "0.0.3",
   "license": "MIT",
   "types": "./types/index.ts",
-  "description": "Core contracts for the MISTswap protocol",
+  "description": "Contracts for bch.domains tokens",
   "files": [
     "abi",
     "artifacts",
@@ -15,14 +15,17 @@
   "author": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mistswapdex/mistswap.git"
+    "url": "git+https://github.com/bchdomains/bch-domains-tokens.git"
   },
   "bugs": {
-    "url": "https://github.com/mistswapdex/mistswap/issues"
+    "url": "https://github.com/bchdomains/bch-domains-tokens/issues"
   },
-  "homepage": "https://github.com/mistswapdex/mistswap#readme",
+  "homepage": "https://github.com/bchdomains/bch-domains-tokens#readme",
   "keywords": [
-    "mistswap",
+    "lns",
+    "bch",
+    "ens",
+    "smartbch",
     "bitcoin-cash"
   ],
   "scripts": {
