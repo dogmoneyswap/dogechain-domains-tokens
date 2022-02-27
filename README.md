@@ -1,10 +1,6 @@
 # BCH Domain Auxillary Contracts
 
-https://mistswap.fi
-
-## Deployed Contracts
-
-https://github.com/mistswapdex/mistswap-sdk/blob/master/src/constants/addresses.ts
+https://bch.domains
 
 ## Docs
 
