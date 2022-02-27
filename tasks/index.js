@@ -1,4 +1,9 @@
-const { ROUTER_ADDRESS, MIST_ADDRESS, BAR_ADDRESS, /* SABLIER_ADDRESS */ } = require('@mistswapdex/sdk');
+const {
+  ROUTER_ADDRESS,
+  MIST_ADDRESS,
+  BAR_ADDRESS,
+  SABLIER_ADDRESS,
+} = require('@mistswapdex/sdk');
 
 const { task } = require("hardhat/config")
 
@@ -62,26 +67,69 @@ task("bar:leave", "DomainBar leave")
   await (await bar.connect(await getNamedSigner("dev")).leave(amount)).wait()
 });
 
+function encodeParameters(types, values) {
+  const abi = new ethers.utils.AbiCoder()
+  return abi.encode(types, values)
+}
 
-task("receiver:convert", "Convert bch to rebuy domain for domain bar")
-.setAction(async function ({ amount }, { ethers: { getNamedSigner } }, runSuper) {
-  const receiver = await ethers.getContract("ENSBCHReceiver")
+task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
+.addParam("oldReceiver", "Account to transfer from")
+.setAction(async function ({ oldReceiver }, { ethers: { getNamedSigner } }, runSuper) {
+  const nreceiver = await ethers.getContract("ENSBCHReceiver")
+  const receiverFactory = await ethers.getContractFactory("ENSBCHReceiver")
+  const receiver = receiverFactory.attach(oldReceiver)
+  const ETHRegistrarController = "0x0acaBb80b45e490e11c3b0513Ba0ad6bC6BF0A6A"; // TODO set from sdk
+  console.log('nreceiver address', nreceiver.address);
 
-  const ETHRegistrarController = "0x0"; // TODO set from sdk
-
-  const withdraw = await (await receiver.connect(await getNamedSigner("dev")).callTarget(
+  const xfer = await (await receiver.connect(await getNamedSigner("dev")).callTarget(
     ETHRegistrarController,
     "0",
-    "withdraw()",
-    encodeParameters([], []),
+    "transferOwnership(address)",
+    encodeParameters(["address"], [nreceiver.address]),
   {
     gasPrice: 1050000000,
     gasLimit: 5198000,
   })).wait()
-  console.log('withdraw', withdraw.transactionHash)
+  console.log('xfer', xfer.transactionHash)
+});
 
-  const served = await (await converter.connect(await getNamedSigner("dev")).convert()).wait()
-  console.log('converted', served.transactionHash)
+task("receiver:convert", "Convert bch to rebuy domain for domain bar")
+.setAction(async function ({ }, { ethers: { getNamedSigner } }, runSuper) {
+  const receiver = await ethers.getContract("ENSBCHReceiver")
+
+  const ETHRegistrarController = "0x0acaBb80b45e490e11c3b0513Ba0ad6bC6BF0A6A"; // TODO set from sdk
+
+  const ethRegistrarBalance = await ethers.provider.getBalance(ETHRegistrarController);
+  console.log('ethRegistrarBalance', ethRegistrarBalance.toString());
+
+
+  if (ethRegistrarBalance.eq(0)) {
+    console.log('skipping withdraw step')
+  } else {
+    const withdraw = await (await receiver.connect(await getNamedSigner("dev")).callTarget(
+      ETHRegistrarController,
+      "0",
+      "withdraw()",
+      encodeParameters([], []),
+    {
+      gasPrice: 1050000000,
+      gasLimit: 5198000,
+    })).wait()
+    console.log('withdraw', withdraw.transactionHash)
+  }
+
+  const receiverBalance = await ethers.provider.getBalance(receiver.address);
+  console.log('receiverBalance', receiverBalance.toString());
+
+  if (receiverBalance.eq(0)) {
+    console.log('skipping convert step');
+  } else {
+    const served = await (await receiver.connect(await getNamedSigner("dev")).convert({
+      gasPrice: 1050000000,
+      gasLimit: 5198000,
+    })).wait()
+    console.log('converted', served.transactionHash)
+  }
 });
 
 task("converter:stake", "Stake")
