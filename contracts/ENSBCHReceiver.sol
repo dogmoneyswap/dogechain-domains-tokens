@@ -7,6 +7,7 @@ import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./DomainBar.sol";
 import "./uniswapv2/UniswapV2Router02.sol";
+import "./interfaces/IETHRegistrarController.sol";
 
 // This receives BCH from ENS
 
@@ -16,15 +17,18 @@ contract ENSBCHReceiver is Ownable {
     IERC20 public domain;
     address public bar;
     UniswapV2Router02 public router;
+    IETHRegistrarController public controller;
 
     constructor(
         address _domain,
         address _bar,
-        address payable _router
+        address payable _router,
+        address payable _controller
     ) public {
         domain = IERC20(_domain);
         bar = _bar;
         router = UniswapV2Router02(_router);
+        controller = IETHRegistrarController(_controller);
     }
 
     event Received(address, uint);
@@ -32,6 +36,7 @@ contract ENSBCHReceiver is Ownable {
         emit Received(msg.sender, msg.value);
     }
 
+    // function to proxy calls to other contracts such as owned controller contract
     // this is imported from https://github.com/mistswapdex/mistswap/blob/master/contracts/governance/Timelock.sol
     event CallTarget(bytes32 indexed txHash, address indexed target, uint value, string signature,  bytes data);
     function callTarget(address target, uint value, string memory signature, bytes memory data) public payable onlyOwner returns (bytes memory) {
@@ -45,7 +50,7 @@ contract ENSBCHReceiver is Ownable {
         }
 
         // solium-disable-next-line security/no-call-value
-        (bool success, bytes memory returnData) = target.call.value(value)(callData);
+        (bool success, bytes memory returnData) = target.call{value: value}(callData);
         require(success, "ENSBCHReceiver::callTarget: Transaction execution reverted.");
 
         emit CallTarget(txHash, target, value, signature, data);
@@ -55,6 +60,11 @@ contract ENSBCHReceiver is Ownable {
 
     // Converts BCH balance to domain and sends to bar
     function convert() public {
+        // claim BCH from RegistrarController, at this point ENSBCHReceiver must own ETHRegistrarController
+        require(controller.owner() == address(this), "Controller is not owned by this contract");
+        require(address(controller).balance > 0, "Zero controller balance");
+        controller.withdraw();
+
         // we do not care about price, so set this to minimum
         uint256 amountOutMin = 1;
 

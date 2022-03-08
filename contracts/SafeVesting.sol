@@ -5,7 +5,8 @@ pragma solidity 0.6.12;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./interfaces/ISablier.sol";
+import "./Sablier/interfaces/ISablier.sol";
+import "./Sablier/Sablier.sol";
 
 // This contract receives domain tokens and allows owner to set up sablier
 // streams for recipients. Only the recipients are able to cancel them.
@@ -25,6 +26,7 @@ contract SafeVesting is Ownable {
     }
 
     // emits CreateStream event
+    // have to have tokens transferred to this contract beforehand
     function createStream(
         address recipient,
         address _token,

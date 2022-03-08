@@ -32,6 +32,9 @@ describe("DomainBar", function () {
     await this.domain.approve(this.bar.address, "100")
     await this.bar.enter("100")
     await expect(this.bar.leave("200")).to.be.revertedWith("ERC20: burn amount exceeds balance")
+
+    expect(await this.bar.totalSupply()).to.equal("100");
+    expect(await this.bar.balanceOf(this.alice.address)).to.equal("100");
   })
 
   it("should work with more than one participant", async function () {

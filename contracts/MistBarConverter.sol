@@ -38,7 +38,7 @@ contract MistBarConverter {
     }
 
     // stakes all domain tokens held
-    // this must be public to allow for setup with the reserved amount 
+    // this must be public to allow for setup with the reserved amount
     function stakeDomain() public {
         uint256 amount = domain.balanceOf(address(this));
         domainbar.enter(amount);
@@ -47,14 +47,16 @@ contract MistBarConverter {
     // unstakes all domain tokens held
     function unstakeDomain() internal {
         uint256 amount = domainbar.balanceOf(address(this));
-        domainbar.leave(amount);
+        if (amount > 0) {
+            domainbar.leave(amount);
+        }
     }
 
     // Converts all excess domain to mist and sends to mistbar
     function convert() public {
         // stage 1 - unstake all
         unstakeDomain();
-        
+
         // stage 2 - check our domain balance is above reservedAmount
         // since the balance is increasing from purchases/staked amount
 
@@ -62,7 +64,7 @@ contract MistBarConverter {
         uint256 delta = domain.balanceOf(address(this))
             .sub(reservedAmount, "MistBarConverter: negative delta");
 
-        // need at least some to bother, 0 in for swaps is weird 
+        // need at least some to bother, 0 in for swaps is weird
         require(delta > 0, "MistBarConverter: minimum balance");
 
         // stage 3 - calculates amount of domain above reservedAmount
