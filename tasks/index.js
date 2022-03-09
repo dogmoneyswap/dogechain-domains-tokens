@@ -8,7 +8,8 @@ const {
 
 const { task } = require("hardhat/config")
 
-const { ethers: { constants: { MaxUint256 }}} = require("ethers")
+const MaxUint256 = require("ethers").constants.MaxInt256;
+const { namehash } = require('ethers/lib/utils');
 
 task("accounts", "Prints the list of accounts", require("./accounts"))
 task("snapshot", "Prints the list of snapshot commands", require("./snapshot"))
@@ -73,6 +74,21 @@ function encodeParameters(types, values) {
   return abi.encode(types, values)
 }
 
+async function getRegitrarAddress(ethers, chainId) {
+  const ensRegistryAddress = ENS_REGISTRAR_ADDRESS[chainId];
+  const ensRegistry = new ethers.Contract(
+    ensRegistryAddress,
+    require('../abi/ENS.json')
+  );
+  const resolverAddress = await ensRegistry.connect(ethers.provider).resolver(namehash('bch'));
+  const resolver = new ethers.Contract(
+    resolverAddress,
+    require('../abi/IInterfaceResolver.json')
+  );
+  const RegistrarControllerAddress = await resolver.connect(ethers.provider).interfaceImplementer(namehash('bch'), 0x018fac06);
+  return RegistrarControllerAddress;
+}
+
 task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
 .addParam("oldReceiver", "Account to transfer from")
 .setAction(async function ({ oldReceiver }, { getChainId, ethers: { getNamedSigner } }, runSuper) {
@@ -81,7 +97,7 @@ task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
   const nreceiver = await ethers.getContract("ENSBCHReceiver")
   const receiverFactory = await ethers.getContractFactory("ENSBCHReceiver")
   const receiver = receiverFactory.attach(oldReceiver)
-  const ETHRegistrarController = ENS_REGISTRAR_ADDRESS[chainId];
+  const ETHRegistrarController = await getRegitrarAddress(ethers, chainId);
   console.log('nreceiver address', nreceiver.address);
 
   const xfer = await (await receiver.connect(await getNamedSigner("dev")).callTarget(
@@ -102,7 +118,7 @@ task("receiver:convert", "Convert bch to rebuy domain for domain bar")
 
   const receiver = await ethers.getContract("ENSBCHReceiver")
 
-  const ETHRegistrarController = ENS_REGISTRAR_ADDRESS[chainId];
+  const ETHRegistrarController = await getRegitrarAddress(ethers, chainId);
 
   const ethRegistrarBalance = await ethers.provider.getBalance(ETHRegistrarController);
   console.log('ethRegistrarBalance', ethRegistrarBalance.toString());

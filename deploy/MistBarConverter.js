@@ -10,7 +10,7 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts, getCha
   const reservedAmount = "350000000000000000000000"; // 35% of 1 million * 1e18
   const domain = await ethers.getContract("DomainToken")
   const domainbar = await ethers.getContract("DomainBar")
-  
+
   const { address } = await deploy("MistBarConverter", {
     from: deployer,
     args: [

@@ -72,7 +72,7 @@ const config: HardhatUserConfig = {
     },
     smartbch: {
       url: "https://smartbch.fountainhead.cash/mainnet",
-      accounts: accounts,
+      accounts,
       chainId: 10000,
       live: true,
       saveDeployments: true,
@@ -80,7 +80,7 @@ const config: HardhatUserConfig = {
     },
     "smartbch-amber": {
       url: "http://moeing.tech:8545",
-      accounts: accounts,
+      accounts,
       chainId: 10001,
       live: true,
       saveDeployments: true,
