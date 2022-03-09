@@ -35,8 +35,7 @@ describe("ENSBCHReceiver", function () {
     this.ensBchReceiver = await this.ENSBCHReceiver.deploy(
       this.domain.address,
       this.bar.address,
-      this.router.address,
-      this.controller.address
+      this.router.address
     );
 
     await this.domain.transfer(this.bob.address, ether("25"))
@@ -79,6 +78,10 @@ describe("ENSBCHReceiver", function () {
     expect(await ethers.provider.getBalance(this.controller.address)).to.be.equal(ether("0"));
     await this.controller.register("name", this.alice.address, 3600, secret, { value: ether("1") });
     expect(await ethers.provider.getBalance(this.controller.address)).to.be.equal(ether("1"));
+
+    // allows to call withdraw by third party
+    await this.controller.connect(this.bob).withdraw();
+    expect(await ethers.provider.getBalance(this.controller.address)).to.be.equal(ether("0"));
   });
 
   it("should register name and invoke convert", async function () {
@@ -96,8 +99,12 @@ describe("ENSBCHReceiver", function () {
 
     await this.controller.transferOwnership(this.ensBchReceiver.address);
 
-    await expect(this.ensBchReceiver.connect(this.carol).convert())
+    await expect(this.controller.connect(this.bob).withdraw())
       .to.emit(this.ensBchReceiver, "Received").withArgs(this.controller.address, ether("1"));
+
+    // allows to call convert by a third party
+    await this.ensBchReceiver.connect(this.carol).convert();
+    expect(await ethers.provider.getBalance(this.ensBchReceiver.address)).to.be.equal(ether("0"));
 
     const newReserves = await this.Pair.attach(this.pair.address).getReserves();
     expect(newReserves[1]).to.be.equal(ether("26"));

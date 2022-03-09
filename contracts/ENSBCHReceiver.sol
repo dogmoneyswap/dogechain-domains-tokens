@@ -17,18 +17,15 @@ contract ENSBCHReceiver is Ownable {
     IERC20 public domain;
     address public bar;
     UniswapV2Router02 public router;
-    IETHRegistrarController public controller;
 
     constructor(
         address _domain,
         address _bar,
-        address payable _router,
-        address payable _controller
+        address payable _router
     ) public {
         domain = IERC20(_domain);
         bar = _bar;
         router = UniswapV2Router02(_router);
-        controller = IETHRegistrarController(_controller);
     }
 
     event Received(address, uint);
@@ -59,12 +56,9 @@ contract ENSBCHReceiver is Ownable {
     }
 
     // Converts BCH balance to domain and sends to bar
+    // prior to convert(), RegistrarController ownership should be transferred to this contract
+    // also withdraw() function of RegistrarController should be invoked to receive funds to be converted
     function convert() public {
-        // claim BCH from RegistrarController, at this point ENSBCHReceiver must own ETHRegistrarController
-        require(controller.owner() == address(this), "Controller is not owned by this contract");
-        require(address(controller).balance > 0, "Zero controller balance");
-        controller.withdraw();
-
         // we do not care about price, so set this to minimum
         uint256 amountOutMin = 1;
 

@@ -12,7 +12,7 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts, getCha
   const domain = await ethers.getContract("DomainToken")
   const bar = await ethers.getContract("DomainBar")
   const router = ROUTER_ADDRESS[chainId];
-  
+
   await deploy("ENSBCHReceiver", {
     from: deployer,
     args: [domain.address, bar.address, router],
@@ -31,6 +31,8 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts, getCha
     console.log("Transfer ownership of ENSBCHReceiver to dev")
     await (await ENSBCHReceiver.transferOwnership(dev, txOptions)).wait()
   }
+
+  console.warn("ENSBCHReceiver deployment: do not forget to transfer  RegistararController's ownership to ENSBCHReceiver");
 }
 
 module.exports.tags = ["ENSBCHReceiver"]
