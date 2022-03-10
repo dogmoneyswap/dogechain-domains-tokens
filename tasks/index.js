@@ -74,7 +74,7 @@ function encodeParameters(types, values) {
   return abi.encode(types, values)
 }
 
-async function getRegitrarAddress(ethers, chainId) {
+async function getRegistrarContract(ethers, chainId) {
   const ensRegistryAddress = ENS_REGISTRAR_ADDRESS[chainId];
   const ensRegistry = new ethers.Contract(
     ensRegistryAddress,
@@ -97,7 +97,7 @@ task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
   const nreceiver = await ethers.getContract("ENSBCHReceiver")
   const receiverFactory = await ethers.getContractFactory("ENSBCHReceiver")
   const receiver = receiverFactory.attach(oldReceiver)
-  const ETHRegistrarController = await getRegitrarAddress(ethers, chainId);
+  const ETHRegistrarController = await getRegistrarContract(ethers, chainId);
   console.log('nreceiver address', nreceiver.address);
 
   const xfer = await (await receiver.connect(await getNamedSigner("dev")).callTarget(
@@ -118,7 +118,7 @@ task("receiver:convert", "Convert bch to rebuy domain for domain bar")
 
   const receiver = await ethers.getContract("ENSBCHReceiver")
 
-  const ETHRegistrarController = await getRegitrarAddress(ethers, chainId);
+  const ETHRegistrarController = await getRegistrarContract(ethers, chainId);
 
   const ethRegistrarBalance = await ethers.provider.getBalance(ETHRegistrarController);
   console.log('ethRegistrarBalance', ethRegistrarBalance.toString());
