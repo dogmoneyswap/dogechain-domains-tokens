@@ -85,8 +85,13 @@ async function getRegistrarContract(ethers, chainId) {
     resolverAddress,
     require('../abi/IInterfaceResolver.json')
   );
-  const RegistrarControllerAddress = await resolver.connect(ethers.provider).interfaceImplementer(namehash('bch'), 0x018fac06);
-  return RegistrarControllerAddress;
+  const registrarControllerAddress = await resolver.connect(ethers.provider).interfaceImplementer(namehash('bch'), 0x018fac06);
+
+  const registrar = new ethers.Contract(
+    registrarControllerAddress,
+    require('../abi/ETHRegistrarControllerMock.json')
+  );
+  return registrar;
 }
 
 task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
@@ -97,11 +102,11 @@ task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
   const nreceiver = await ethers.getContract("ENSBCHReceiver")
   const receiverFactory = await ethers.getContractFactory("ENSBCHReceiver")
   const receiver = receiverFactory.attach(oldReceiver)
-  const ETHRegistrarController = await getRegistrarContract(ethers, chainId);
+  const ethRegistrarController = await getRegistrarContract(ethers, chainId);
   console.log('nreceiver address', nreceiver.address);
 
   const xfer = await (await receiver.connect(await getNamedSigner("dev")).callTarget(
-    ETHRegistrarController,
+    ethRegistrarController.address,
     "0",
     "transferOwnership(address)",
     encodeParameters(["address"], [nreceiver.address]),
@@ -118,20 +123,16 @@ task("receiver:convert", "Convert bch to rebuy domain for domain bar")
 
   const receiver = await ethers.getContract("ENSBCHReceiver")
 
-  const ETHRegistrarController = await getRegistrarContract(ethers, chainId);
+  const ethRegistrarController = await getRegistrarContract(ethers, chainId);
 
-  const ethRegistrarBalance = await ethers.provider.getBalance(ETHRegistrarController);
+  const ethRegistrarBalance = await ethers.provider.getBalance(ethRegistrarController.address);
   console.log('ethRegistrarBalance', ethRegistrarBalance.toString());
 
 
   if (ethRegistrarBalance.eq(0)) {
     console.log('skipping withdraw step')
   } else {
-    const withdraw = await (await receiver.connect(await getNamedSigner("dev")).callTarget(
-      ETHRegistrarController,
-      "0",
-      "withdraw()",
-      encodeParameters([], []),
+    const withdraw = await (await ethRegistrarController.connect(await getNamedSigner("dev")).withdraw(
     {
       gasPrice: 1050000000,
       gasLimit: 5198000,
