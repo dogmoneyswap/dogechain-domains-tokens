@@ -95,4 +95,4 @@ async function snapshot(targetBlockNumber) {
   return balanceMap;
 }
 
-module.exports = async () => snapshot(1020000);
+module.exports = async () => snapshot(3456866);
