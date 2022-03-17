@@ -1,5 +1,4 @@
-// TODO update sdk
-// const { SABLIER_ADDRESS } = require('@mistswapdex/sdk');
+const { SABLIER_ADDRESS } = require('@mistswapdex/sdk');
 
 module.exports = async function ({ getNamedAccounts, deployments, getChainId }) {
   const { deploy } = deployments
@@ -10,8 +9,7 @@ module.exports = async function ({ getNamedAccounts, deployments, getChainId }) 
 
   await deploy("SafeVesting", {
     from: deployer,
-    // TODO use SABLIER_ADDRESS
-    args: [/* SABLIER_ADDRESS[chainId] */"0xeE85373F26E5380Fbd71FB7295BD68fdd0818887"],
+    args: [SABLIER_ADDRESS[chainId]],
     log: true,
     deterministicDeployment: false
   })
