@@ -1,6 +1,6 @@
 {
   "name": "@bchdomains/bch-domains-tokens",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "types": "./types/index.ts",
   "description": "Contracts for bch.domains tokens",
