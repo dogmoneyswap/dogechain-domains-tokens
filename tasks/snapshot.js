@@ -89,10 +89,10 @@ async function snapshot(targetBlockNumber) {
     const share = totalSupply / parseFloat(balance.toString());
     const amount = ethers.BigNumber.from(parseInt(50000000000000 / share, 10)).mul("1000000000");
     totalAmount = totalAmount.add(amount);
-    console.log(`npx hardhat --network smartbch-amber erc20:transfer --recipient "${account}" --token "DOMAINTOKEN" --amount "${amount.toString()}"`);
+    console.log(`npx hardhat --network smartbch erc20:transfer --recipient "${account}" --token "0x35b3Ee79E1A7775cE0c11Bd8cd416630E07B0d6f" --amount "${amount.toString()}"`);
   }
 
   return balanceMap;
 }
 
-module.exports = async () => snapshot(3456866);
+module.exports = async () => snapshot(3594185);
