@@ -132,8 +132,7 @@ task("receiver:convert", "Convert bch to rebuy domain for domain bar")
   if (ethRegistrarBalance.eq(0)) {
     console.log('skipping withdraw step')
   } else {
-    const withdraw = await (await ethRegistrarController.connect(await getNamedSigner("dev")).withdraw(
-    {
+    const withdraw = await (await ethRegistrarController.connect(await getNamedSigner("dev")).withdraw({
       gasPrice: 1050000000,
       gasLimit: 5198000,
     })).wait()
@@ -164,7 +163,11 @@ task("converter:stake", "Stake")
 task("converter:convert", "Convert to mist bar")
 .setAction(async function ({ amount }, { ethers: { getNamedSigner } }, runSuper) {
   const converter = await ethers.getContract("MistBarConverter")
-  const served = await (await converter.connect(await getNamedSigner("dev")).convert()).wait()
+  const served = await (await converter.connect(await getNamedSigner("dev")).convert({
+      gasPrice: 1050000000,
+      gasLimit: 5198000,
+    }
+  )).wait()
   console.log('converted', served.transactionHash)
 });
 
