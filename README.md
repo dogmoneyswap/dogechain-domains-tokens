@@ -1,6 +1,6 @@
-# BCH Domain Auxillary Contracts
+# ĐNS Domain Auxillary Contracts
 
-https://bch.domains
+https://dogedomains.wf
 
 ## Docs
 
