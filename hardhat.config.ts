@@ -70,22 +70,13 @@ const config: HardhatUserConfig = {
       saveDeployments: true,
       tags: ["test", "local"],
     },
-    smartbch: {
-      url: "https://smartbch.fountainhead.cash/mainnet",
+    dogechain: {
+      url: "https://rpc.dogechain.dog",
       accounts,
-      chainId: 10000,
+      chainId: 2000,
       live: true,
       saveDeployments: true,
-      gasPrice: 1046739556,
-    },
-    "smartbch-amber": {
-      url: "http://moeing.tech:8545",
-      accounts,
-      chainId: 10001,
-      live: true,
-      saveDeployments: true,
-      tags: ["staging"],
-      gasPrice: 1046739556,
+      gasMultiplier: 2,
     },
   },
   paths: {
