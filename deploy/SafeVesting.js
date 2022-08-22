@@ -1,4 +1,4 @@
-const { SABLIER_ADDRESS } = require('@mistswapdex/sdk');
+const { SABLIER_ADDRESS } = require('@dogmoneyswap/sdk');
 
 module.exports = async function ({ getNamedAccounts, deployments, getChainId }) {
   const { deploy } = deployments

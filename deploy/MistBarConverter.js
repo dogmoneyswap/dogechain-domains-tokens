@@ -1,4 +1,4 @@
-const { ROUTER_ADDRESS, MIST_ADDRESS, BAR_ADDRESS } = require('@mistswapdex/sdk');
+const { ROUTER_ADDRESS, MIST_ADDRESS, BAR_ADDRESS } = require('@dogmoneyswap/sdk');
 
 module.exports = async function ({ ethers, deployments, getNamedAccounts, getChainId }) {
   const { deploy } = deployments
