@@ -2,7 +2,6 @@ const {
   ROUTER_ADDRESS,
   MIST_ADDRESS,
   BAR_ADDRESS,
-  SABLIER_ADDRESS,
   ENS_REGISTRAR_ADDRESS,
 } = require('@dogmoneyswap/sdk');
 
@@ -111,8 +110,7 @@ task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
     "transferOwnership(address)",
     encodeParameters(["address"], [nreceiver.address]),
   {
-    gasPrice: 1050000000,
-    gasLimit: 5198000,
+    gasPrice: 50000000000,
   })).wait()
   console.log('xfer', xfer.transactionHash)
 });
@@ -133,8 +131,7 @@ task("receiver:convert", "Convert bch to rebuy domain for domain bar")
     console.log('skipping withdraw step')
   } else {
     const withdraw = await (await ethRegistrarController.connect(await getNamedSigner("dev")).withdraw({
-      gasPrice: 1050000000,
-      gasLimit: 5198000,
+      gasPrice: 50000000000,
     })).wait()
     console.log('withdraw', withdraw.transactionHash)
   }
@@ -146,8 +143,7 @@ task("receiver:convert", "Convert bch to rebuy domain for domain bar")
     console.log('skipping convert step');
   } else {
     const served = await (await receiver.connect(await getNamedSigner("dev")).convert({
-      gasPrice: 1050000000,
-      gasLimit: 5198000,
+      gasPrice: 50000000000,
     })).wait()
     console.log('converted', served.transactionHash)
   }
@@ -164,8 +160,7 @@ task("converter:convert", "Convert to mist bar")
 .setAction(async function ({ amount }, { ethers: { getNamedSigner } }, runSuper) {
   const converter = await ethers.getContract("MistBarConverter")
   const served = await (await converter.connect(await getNamedSigner("dev")).convert({
-      gasPrice: 1050000000,
-      gasLimit: 5198000,
+      gasPrice: 50000000000,
     }
   )).wait()
   console.log('converted', served.transactionHash)
@@ -190,7 +185,7 @@ task("vesting:create", "Create new vesting")
     token,
     amount,
     timelength,
-    { gasPrice: 1050000000, gasLimit: 5198000 }
+    { gasPrice: 50000000000 }
   )).wait();
   console.log('stream created', stream.transactionHash);
   console.log('stream id', stream.events[stream.events.length - 1].topics[1]);
@@ -205,10 +200,7 @@ task("vesting:balance", "Check balance of stream on account")
 }, { getChainId, ethers: { getNamedSigner } }, runSuper) {
   const chainId = await getChainId();
 
-  const sablier = new ethers.Contract(
-    SABLIER_ADDRESS[chainId],
-     require('../abi/ISablier.json')
-  );
+  const sablier = await ethers.getContract("Sablier")
   console.log('balance', ethers.utils.formatEther(await (await sablier.connect(await getNamedSigner("dev")).balanceOf(
     stream,
     account,
@@ -222,10 +214,7 @@ task("vesting:withdraw", "Withdraw balance")
 }, { getChainId, ethers: { getNamedSigner } }, runSuper) {
   const chainId = await getChainId();
 
-  const sablier = new ethers.Contract(
-      SABLIER_ADDRESS[chainId],
-     require('../abi/ISablier.json')
-  );
+  const sablier = await ethers.getContract("Sablier")
   const balance = (await (await sablier.connect(await getNamedSigner("dev")).balanceOf(
     stream,
     await (await getNamedSigner("vesting")).getAddress(),
@@ -234,7 +223,7 @@ task("vesting:withdraw", "Withdraw balance")
   const withdraw = await (await sablier.connect(await getNamedSigner("vesting")).withdrawFromStream(
     stream,
     balance,
-    { gasPrice: 1050000000, gasLimit: 5198000 }
+    { gasPrice: 50000000000 }
   )).wait();
   console.log('withdraw', withdraw.transactionHash);
 });

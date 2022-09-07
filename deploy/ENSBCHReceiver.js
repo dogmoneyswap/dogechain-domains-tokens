@@ -21,13 +21,11 @@ module.exports = async function ({ ethers, deployments, getNamedAccounts, getCha
   })
 
   const txOptions = {
-    gasPrice: 1050000000,
-    gasLimit: 5000000,
+     gasPrice: 50000000000,
   }
 
   const ENSBCHReceiver = await ethers.getContract("ENSBCHReceiver")
   if (await ENSBCHReceiver.owner() !== dev) {
-    // Transfer ownership of MasterChef to Timelock
     console.log("Transfer ownership of ENSBCHReceiver to dev")
     await (await ENSBCHReceiver.transferOwnership(dev, txOptions)).wait()
   }

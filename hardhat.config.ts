@@ -71,6 +71,7 @@ const config: HardhatUserConfig = {
       tags: ["test", "local"],
     },
     dogechain: {
+      // url: "https://rpc.dogmoney.money/public/full",
       url: "https://rpc.dogechain.dog",
       accounts,
       chainId: 2000,
