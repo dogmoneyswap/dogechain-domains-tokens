@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 // Very simple ERC20 which is sent entirely to the receiver
 
-contract DomainToken is ERC20("DogeChain Name Service", "ĐNS") {
+contract DomainToken is ERC20("Đoge Name Service", "ĐNS") {
     constructor(address _receiver, uint256 _amount) public {
         _mint(_receiver, _amount);
     }
