@@ -14,20 +14,22 @@ npx hardhat --network dogechain-testnet vesting:create --recipient "KASUMI" --to
 
 
 # send 10.5% to mistbarconverter and set up dogmoney staking
-npx hardhat --network dogechain-testnet erc20:transfer --recipient "MIST_BAR_CONVERTER" --token "DOMAIN_TOKEN" --amount "1050000000000000000000000"
+npx hardhat --network dogechain-testnet erc20:transfer --recipient "MIST_BAR_CONVERTER" --token "DOMAIN_TOKEN" --amount "105000000000000000000000"
 npx hardhat --network dogechain-testnet converter:stake
 
-# send 1.5% to dogmoney
-npx hardhat --network dogechain-testnet erc20:transfer --recipient "DOGMONEY" --token "DOMAIN_TOKEN" --amount "150000000000000000000000"
+# send 1.5% to safe
+npx hardhat --network dogechain-testnet erc20:transfer --recipient "DOGESAFE" --token "DOMAIN_TOKEN" --amount "15000000000000000000000"
 
 # send 7.5 to pat
-npx hardhat --network dogechain-testnet erc20:transfer --recipient "PAT" --token "DOMAIN_TOKEN" --amount "750000000000000000000000"
+npx hardhat --network dogechain-testnet erc20:transfer --recipient "PAT" --token "DOMAIN_TOKEN" --amount "75000000000000000000000"
 
 # send 7.5 to kasumi
-npx hardhat --network dogechain-testnet erc20:transfer --recipient "KASUMI" --token "DOMAIN_TOKEN" --amount "750000000000000000000000"
+npx hardhat --network dogechain-testnet erc20:transfer --recipient "KASUMI" --token "DOMAIN_TOKEN" --amount "75000000000000000000000"
 
 
 
+# remaining tokens (15% + remainder of 5% from airdrop) sent to 2/3 safe held by kasumi, pat, gilgames
+npx hardhat --network dogechain-testnet erc20:transfer --recipient "DOGESAFE" --token "DOMAIN_TOKEN" --amount "150000000000000000000000"
 
  
 # testing receiver
@@ -47,4 +49,4 @@ npx hardhat --network dogechain-testnet receiver:convert
 # 10 DNS for 4 letter domain
 # etc
 
-# remaining tokens (15% + remainder of 5% from airdrop) sent to 2/3 safe held by kasumi, pat, gilgames
+# remaining is sent to safe
