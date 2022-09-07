@@ -1,5 +1,3 @@
-const { SABLIER_ADDRESS } = require('@dogmoneyswap/sdk');
-
 module.exports = async function ({ getNamedAccounts, deployments, getChainId }) {
   const { deploy } = deployments
 
@@ -7,9 +5,11 @@ module.exports = async function ({ getNamedAccounts, deployments, getChainId }) 
 
   const chainId = await getChainId();
 
+  const sablier = await ethers.getContract("Sablier");
+
   await deploy("SafeVesting", {
     from: deployer,
-    args: [SABLIER_ADDRESS[chainId]],
+    args: [sablier.address],
     log: true,
     deterministicDeployment: false
   })
@@ -21,11 +21,10 @@ module.exports = async function ({ getNamedAccounts, deployments, getChainId }) 
 
   const SafeVesting = await ethers.getContract("SafeVesting")
   if (await SafeVesting.owner() !== dev) {
-    // Transfer ownership of MasterChef to Timelock
     console.log("Transfer ownership of SafeVesting to dev")
     await (await SafeVesting.transferOwnership(dev, txOptions)).wait()
   }
 }
 
 module.exports.tags = ["SafeVesting"]
-module.exports.dependencies = []
+module.exports.dependencies = ["Sablier"]
