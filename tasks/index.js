@@ -4,7 +4,7 @@ const {
   BAR_ADDRESS,
   SABLIER_ADDRESS,
   ENS_REGISTRAR_ADDRESS,
-} = require('@mistswapdex/sdk');
+} = require('@dogmoneyswap/sdk');
 
 const { task } = require("hardhat/config")
 

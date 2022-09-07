@@ -27,6 +27,19 @@
   version "1.0.4"
   resolved "https://codeload.github.com/boringcrypto/BoringSolidity/tar.gz/e06e943e7e8a168ed0395ef663a17fd71a6949a2"
 
+"@dogmoneyswap/sdk@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@dogmoneyswap/sdk/-/sdk-0.0.3.tgz#b1031d156c2e468ca93c20b85b979d9fa1ac0917"
+  integrity sha512-ZNNvWprlVg27ERLE2kaiMl5fE4vjAA5odW+a1fuFRg4JzaZluW9Y1YmENBdSCfEloMxzG3V4PtUw+usO0wozIw==
+  dependencies:
+    big.js "^6.1.0"
+    decimal.js-light "^2.5.0"
+    isomorphic-unfetch "^3.1.0"
+    jsbi "^3.1.0"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
+
 "@ensdomains/ens@^0.4.4":
   version "0.4.5"
   resolved "https://registry.yarnpkg.com/@ensdomains/ens/-/ens-0.4.5.tgz#e0aebc005afdc066447c6e22feb4eda89a5edbfc"
@@ -487,19 +500,6 @@
   integrity sha512-T9HUVEjEgM0MzVLY4gs52ffz5AlHeC3CSGFcEzL4ojKMVzMxa3na1GW/XCmunrhnWP2cDh4fE2MhqLxA0CHqTw==
   dependencies:
     keccak "^3.0.0"
-
-"@mistswapdex/sdk@^0.0.16":
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/@mistswapdex/sdk/-/sdk-0.0.16.tgz#a848583a1584ba39e578935889a498751dbb8fbb"
-  integrity sha512-nqJWTPb+jWfTvWY/P5i28UMqCipKhc7rY046VIqcNJN0d96o5hfoezYDyj76v+gmVrfJ0amHwYIy3SnU8Z0e2Q==
-  dependencies:
-    big.js "^6.1.0"
-    decimal.js-light "^2.5.0"
-    isomorphic-unfetch "^3.1.0"
-    jsbi "^3.1.0"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
