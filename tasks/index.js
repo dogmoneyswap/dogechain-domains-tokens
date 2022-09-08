@@ -93,6 +93,19 @@ async function getRegistrarContract(ethers, chainId) {
   return registrar;
 }
 
+task("receiver:xferownership", "Change receivers owner")
+.addParam("address", "Account to transfer to")
+.setAction(async function ({ address }, { getChainId, ethers: { getNamedSigner } }, runSuper) {
+  const chainId = await getChainId();
+
+  const receiver = await ethers.getContract("ENSBCHReceiver")
+
+  const xfer = await (await receiver.connect(await getNamedSigner("dev")).transferOwnership(address, {
+    gasPrice: 50000000000,
+  })).wait();
+  console.log('xfer', xfer.transactionHash)
+});
+
 task("receiver:upgrade", "Convert bch to rebuy domain for domain bar")
 .addParam("oldReceiver", "Account to transfer from")
 .setAction(async function ({ oldReceiver }, { getChainId, ethers: { getNamedSigner } }, runSuper) {
