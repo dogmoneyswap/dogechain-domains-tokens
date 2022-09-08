@@ -7,5 +7,5 @@ const holders = JSON.parse(data);
 
 for (const [addr, bal] of Object.entries(holders)) {
     // console.log(`npx hardhat --network dogechain erc20:transfer --recipient "${addr}" --token "0xe729ffC468e309F8d68bE26026C7A442D84caf2D" --amount "${(new BN(bal)).multipliedBy(1e18).toFixed()}"`)
-    console.log(`erc20,0xe729ffC468e309F8d68bE26026C7A442D84caf2D,${addr},${bal.toFixed()},`)
+    console.log(`erc20,0xE6bBD3B28C14bf325b91203De60aF2458DBFc5b6,${addr},${bal.toFixed()},`)
 }

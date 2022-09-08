@@ -60,7 +60,7 @@ const totalBalance = Object.entries(holders).reduce((a, v) => a.plus(v[1]), new 
 for (const [addr, bal] of Object.entries(holders)) {
     const amnt = bal.dividedBy(totalBalance).multipliedBy(AIRDROP_AMOUNT).dividedBy(1e18).toFixed(18);
     holders[addr] = amnt;
-    console.log(`erc20,0xe729ffC468e309F8d68bE26026C7A442D84caf2D,${addr},${amnt},`)
+    console.log(`erc20,0xE6bBD3B28C14bf325b91203De60aF2458DBFc5b6,${addr},${amnt},`)
     // console.log(addr, holders[addr].toFixed())
     // console.log(`npx hardhat --network dogechain erc20:transfer --recipient "${addr}" --token "0xe729ffC468e309F8d68bE26026C7A442D84caf2D" --amount "${bal.toFixed()}"`)
 }
