@@ -1,6 +1,7 @@
 const fs = require('fs');
 const BN = require('bignumber.js');
 BN.set({ ROUNDING_MODE: BN.ROUND_DOWN })
+const { BigNumber, ethers } = require('ethers');
 
 
 const AIRDROP_AMOUNT = (new BN("5000")).multipliedBy(1e18); // total remaining would be 25000
@@ -56,17 +57,17 @@ for (const [addr, bal] of Object.entries(xlnsholders)) {
 
 // console.log(holders)
 
-console.log('#!/bin/bash');
-console.log('set -x');
-console.log();
+// console.log('#!/bin/bash');
+// console.log('set -x');
+// console.log();
 
 const totalBalance = Object.entries(holders).reduce((a, v) => a.plus(v[1]), new BN(0));
 for (const [addr, bal] of Object.entries(holders)) {
     const amnt = bal.dividedBy(totalBalance).multipliedBy(AIRDROP_AMOUNT);
     holders[addr] = amnt;
     // console.log(`erc20,0xE6bBD3B28C14bf325b91203De60aF2458DBFc5b6,${addr},${amnt},`)
-    // console.log(addr, holders[addr].toFixed())
-    console.log(`npx hardhat --network dogechain erc20:transfer --recipient "${addr}" --token "0xE6bBD3B28C14bf325b91203De60aF2458DBFc5b6" --amount "${amnt.toFixed()}"`)
+    console.log(addr, ethers.utils.formatEther(holders[addr].toFixed()))
+    // console.log(`npx hardhat --network dogechain erc20:transfer --recipient "${addr}" --token "0xE6bBD3B28C14bf325b91203De60aF2458DBFc5b6" --amount "${amnt.toFixed()}"`)
 }
 // const totalToSend = Object.entries(holders).reduce((a, v) => a.plus(v[1]), new BN(0));
 // console.log(totalToSend.dividedBy(1e18).toString())

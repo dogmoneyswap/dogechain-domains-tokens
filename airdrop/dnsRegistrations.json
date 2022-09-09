@@ -392,6 +392,20 @@
     "registrationDate": "1661850820"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "redmi.doge",
+      "owner": {
+        "id": "0x7df1319c2870650ac652d50ed38d26d9783cb510"
+      }
+    },
+    "expiryDate": "1694273752",
+    "registrant": {
+      "id": "0x7df1319c2870650ac652d50ed38d26d9783cb510"
+    },
+    "registrationDate": "1662716800"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "mozilla.doge",
@@ -532,6 +546,20 @@
     "registrationDate": "1662206240"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "github.doge",
+      "owner": {
+        "id": "0x223228e5dea62256ec37baf796cdb546efd8bd2a"
+      }
+    },
+    "expiryDate": "1694274200",
+    "registrant": {
+      "id": "0x223228e5dea62256ec37baf796cdb546efd8bd2a"
+    },
+    "registrationDate": "1662717248"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "earth.doge",
@@ -600,6 +628,20 @@
       "id": "0x607e0f6055087f84b192b255b2272446432a4423"
     },
     "registrationDate": "1661664574"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "doge9.doge",
+      "owner": {
+        "id": "0x7ca9212b3b9640dcbe866f86b8601e5beb666648"
+      }
+    },
+    "expiryDate": "1694275748",
+    "registrant": {
+      "id": "0x7ca9212b3b9640dcbe866f86b8601e5beb666648"
+    },
+    "registrationDate": "1662718796"
   },
   {
     "cost": "100000003168849933296",
@@ -714,6 +756,20 @@
     "registrationDate": "1662684609"
   },
   {
+    "cost": "450000014259793142880",
+    "domain": {
+      "name": "circle.doge",
+      "owner": {
+        "id": "0xb8a5674cda2756326075aa17e5def50b539251b3"
+      }
+    },
+    "expiryDate": "1820501232",
+    "registrant": {
+      "id": "0xb8a5674cda2756326075aa17e5def50b539251b3"
+    },
+    "registrationDate": "1662716472"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "badass.doge",
@@ -779,7 +835,7 @@
     },
     "expiryDate": "1693418104",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1661861152"
   },
@@ -978,6 +1034,20 @@
       "id": "0x8bf1a4b7e27b0f2ac02fc6176177dcfce8cded93"
     },
     "registrationDate": "1661790776"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "karen.doge",
+      "owner": {
+        "id": "0x23749a7e60dc902c03e656bf8155d02973dc0a00"
+      }
+    },
+    "expiryDate": "1694281370",
+    "registrant": {
+      "id": "0x23749a7e60dc902c03e656bf8155d02973dc0a00"
+    },
+    "registrationDate": "1662724418"
   },
   {
     "cost": "1000000031688720231624",
@@ -1316,6 +1386,20 @@
     "registrationDate": "1662037966"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "mubaranky.doge",
+      "owner": {
+        "id": "0xa74faebc8cdca953e2bebf2f6e86927162acfd13"
+      }
+    },
+    "expiryDate": "1694279632",
+    "registrant": {
+      "id": "0xa74faebc8cdca953e2bebf2f6e86927162acfd13"
+    },
+    "registrationDate": "1662722680"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "slimshady.doge",
@@ -1605,7 +1689,7 @@
     },
     "expiryDate": "1693303642",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661746690"
   },
@@ -1633,7 +1717,7 @@
     },
     "expiryDate": "1693233140",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661676188"
   },
@@ -1871,7 +1955,7 @@
     },
     "expiryDate": "1693949705",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1662392753"
   },
@@ -2081,9 +2165,23 @@
     },
     "expiryDate": "1693745054",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1662188102"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "successalltheway.doge",
+      "owner": {
+        "id": "0xadb5fae70a34d3f9a4ec9b36f2bca10108281bcb"
+      }
+    },
+    "expiryDate": "1694277278",
+    "registrant": {
+      "id": "0xadb5fae70a34d3f9a4ec9b36f2bca10108281bcb"
+    },
+    "registrationDate": "1662720326"
   },
   {
     "cost": "100000003168849933296",
@@ -2109,7 +2207,7 @@
     },
     "expiryDate": "1693403868",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661846916"
   },
@@ -2977,7 +3075,7 @@
     },
     "expiryDate": "1693388948",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661831996"
   },
@@ -3094,6 +3192,20 @@
     "registrationDate": "1661777180"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "kaybankrose.doge",
+      "owner": {
+        "id": "0x4f0f010bacbb5b80632d02f50ce4f940ae48aeb4"
+      }
+    },
+    "expiryDate": "1694273970",
+    "registrant": {
+      "id": "0x4f0f010bacbb5b80632d02f50ce4f940ae48aeb4"
+    },
+    "registrationDate": "1662717018"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "supreme.doge",
@@ -3106,6 +3218,20 @@
       "id": "0xb4620f4a65be4ed59060973567dbaa4c9fb17d76"
     },
     "registrationDate": "1661521350"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "15555.doge",
+      "owner": {
+        "id": "0x362cf0c258973d56f5a3c04671b1579e11c2b0c5"
+      }
+    },
+    "expiryDate": "1694281054",
+    "registrant": {
+      "id": "0x362cf0c258973d56f5a3c04671b1579e11c2b0c5"
+    },
+    "registrationDate": "1662724102"
   },
   {
     "cost": "100000003168849933296",
@@ -3766,6 +3892,20 @@
     "registrationDate": "1661196113"
   },
   {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "goldenprince4u.doge",
+      "owner": {
+        "id": "0xa9f5863805646226a3345daf22c5ea413ced8760"
+      }
+    },
+    "expiryDate": "1694281246",
+    "registrant": {
+      "id": "0xa9f5863805646226a3345daf22c5ea413ced8760"
+    },
+    "registrationDate": "1662724294"
+  },
+  {
     "cost": "200000006337699866592",
     "domain": {
       "name": "genghis.doge",
@@ -3820,6 +3960,20 @@
       "id": "0x2f37762456f82facc2cec917e4df60f953b2a8ad"
     },
     "registrationDate": "1661827462"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "mhizc.doge",
+      "owner": {
+        "id": "0x4d5b01972aac5f15e663825c133074f119b7b9a6"
+      }
+    },
+    "expiryDate": "1694279374",
+    "registrant": {
+      "id": "0x4d5b01972aac5f15e663825c133074f119b7b9a6"
+    },
+    "registrationDate": "1662722422"
   },
   {
     "cost": "100000003168849933296",
@@ -3976,6 +4130,20 @@
     "registrationDate": "1661785228"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "tymeless.doge",
+      "owner": {
+        "id": "0xb03a8ede596411a09fbbc288e856309eca344058"
+      }
+    },
+    "expiryDate": "1694273538",
+    "registrant": {
+      "id": "0xb03a8ede596411a09fbbc288e856309eca344058"
+    },
+    "registrationDate": "1662716586"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "pension.doge",
@@ -4016,6 +4184,20 @@
       "id": "0x82fd171d9a11259758012df50d57918210f7d4b9"
     },
     "registrationDate": "1661637878"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "cryptocurrencyjobs.doge",
+      "owner": {
+        "id": "0x4411d8e4d94833f879f629f3667134ce335a73b4"
+      }
+    },
+    "expiryDate": "1694279834",
+    "registrant": {
+      "id": "0x4411d8e4d94833f879f629f3667134ce335a73b4"
+    },
+    "registrationDate": "1662722882"
   },
   {
     "cost": "100000003168849933296",
@@ -4172,6 +4354,20 @@
     "registrationDate": "1662218864"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "galxe.doge",
+      "owner": {
+        "id": "0xbde8d3ef66ea8a6c38024615e0117c4d7b3d5cd9"
+      }
+    },
+    "expiryDate": "1694274234",
+    "registrant": {
+      "id": "0xbde8d3ef66ea8a6c38024615e0117c4d7b3d5cd9"
+    },
+    "registrationDate": "1662717282"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "playable.doge",
@@ -4240,6 +4436,34 @@
       "id": "0xe032d5cb6d9a4cdc72b8b9336c575da18b50b963"
     },
     "registrationDate": "1662072058"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "dasector.doge",
+      "owner": {
+        "id": "0x5262aa6428240bfe97c91f1f192d4d2596c988fc"
+      }
+    },
+    "expiryDate": "1694283344",
+    "registrant": {
+      "id": "0x5262aa6428240bfe97c91f1f192d4d2596c988fc"
+    },
+    "registrationDate": "1662726392"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "gwealth.doge",
+      "owner": {
+        "id": "0x99328b165f0525bb26a95c98c414191b16e562d8"
+      }
+    },
+    "expiryDate": "1694279280",
+    "registrant": {
+      "id": "0x99328b165f0525bb26a95c98c414191b16e562d8"
+    },
+    "registrationDate": "1662722328"
   },
   {
     "cost": "100000003168849933296",
@@ -4321,7 +4545,7 @@
     },
     "expiryDate": "1693401472",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661844520"
   },
@@ -4377,7 +4601,7 @@
     },
     "expiryDate": "1693404656",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661847704"
   },
@@ -4592,6 +4816,20 @@
     "registrationDate": "1662558119"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "45645.doge",
+      "owner": {
+        "id": "0xa5a9cf3b8826169fd195b15a34a5f3d6e91d7898"
+      }
+    },
+    "expiryDate": "1694277052",
+    "registrant": {
+      "id": "0xa5a9cf3b8826169fd195b15a34a5f3d6e91d7898"
+    },
+    "registrationDate": "1662720100"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "carinsurance.doge",
@@ -4688,6 +4926,20 @@
       "id": "0xe116d5f4ccd817e93a4827b4b1166fb3fa61bec5"
     },
     "registrationDate": "1661990118"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "barthczar.doge",
+      "owner": {
+        "id": "0x2153e7984901e426dbd74a8d1dbf190dcffafe4d"
+      }
+    },
+    "expiryDate": "1694277462",
+    "registrant": {
+      "id": "0x2153e7984901e426dbd74a8d1dbf190dcffafe4d"
+    },
+    "registrationDate": "1662720510"
   },
   {
     "cost": "100000003168849933296",
@@ -4928,6 +5180,20 @@
     "registrationDate": "1661420779"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "labra.doge",
+      "owner": {
+        "id": "0x76b60dcf71da2294f8aa034432d925d1eed8cf68"
+      }
+    },
+    "expiryDate": "1694275698",
+    "registrant": {
+      "id": "0x76b60dcf71da2294f8aa034432d925d1eed8cf68"
+    },
+    "registrationDate": "1662718746"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "labrador.doge",
@@ -5108,6 +5374,20 @@
       "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
     },
     "registrationDate": "1661237227"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "toheeb2452.doge",
+      "owner": {
+        "id": "0x9986cda2891e7963cc75f50fc4bb360b47a85fab"
+      }
+    },
+    "expiryDate": "1694276066",
+    "registrant": {
+      "id": "0x9986cda2891e7963cc75f50fc4bb360b47a85fab"
+    },
+    "registrationDate": "1662719114"
   },
   {
     "cost": "500000015844249666480",
@@ -5497,7 +5777,7 @@
     },
     "expiryDate": "1695303103",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661221595"
   },
@@ -5637,7 +5917,7 @@
     },
     "expiryDate": "1693465440",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1661908488"
   },
@@ -5752,6 +6032,20 @@
       "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
     },
     "registrationDate": "1661614032"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "adebisi50.doge",
+      "owner": {
+        "id": "0x1831b7e082d5668777d44d0f2d16399fdd6b9703"
+      }
+    },
+    "expiryDate": "1694282944",
+    "registrant": {
+      "id": "0x1831b7e082d5668777d44d0f2d16399fdd6b9703"
+    },
+    "registrationDate": "1662725992"
   },
   {
     "cost": "100000003168849933296",
@@ -5908,6 +6202,20 @@
     "registrationDate": "1661798470"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "88818.doge",
+      "owner": {
+        "id": "0xf656970a1994c211acda565b8fa85f045aca3e4d"
+      }
+    },
+    "expiryDate": "1694275332",
+    "registrant": {
+      "id": "0xf656970a1994c211acda565b8fa85f045aca3e4d"
+    },
+    "registrationDate": "1662718380"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "dogeape.doge",
@@ -5962,6 +6270,20 @@
       "id": "0x2e5c5869ddd34e15168348dc8a14ccec256ef032"
     },
     "registrationDate": "1661784118"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "standard.doge",
+      "owner": {
+        "id": "0xdcdeabab36ff583578c9f313a3bd4288eacf5ef3"
+      }
+    },
+    "expiryDate": "1694274434",
+    "registrant": {
+      "id": "0xdcdeabab36ff583578c9f313a3bd4288eacf5ef3"
+    },
+    "registrationDate": "1662717482"
   },
   {
     "cost": "100000003168849933296",
@@ -6230,6 +6552,20 @@
     "registrationDate": "1661787476"
   },
   {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "17777.doge",
+      "owner": {
+        "id": "0x8c0b2ff66ffc5d76d063c02e77282d7facbd3a54"
+      }
+    },
+    "expiryDate": "1694280928",
+    "registrant": {
+      "id": "0x8c0b2ff66ffc5d76d063c02e77282d7facbd3a54"
+    },
+    "registrationDate": "1662723976"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "mutantdoge.doge",
@@ -6393,7 +6729,7 @@
     },
     "expiryDate": "1693401394",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661844442"
   },
@@ -6536,6 +6872,20 @@
       "id": "0xa5d9fe377b6c821e08360526bf3879c859cbb52c"
     },
     "registrationDate": "1661603648"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "broysh.doge",
+      "owner": {
+        "id": "0x867855dc3ad5ce36b0e637e8b82059f90971903c"
+      }
+    },
+    "expiryDate": "1694277900",
+    "registrant": {
+      "id": "0x867855dc3ad5ce36b0e637e8b82059f90971903c"
+    },
+    "registrationDate": "1662720948"
   },
   {
     "cost": "100000003168849933296",
@@ -6967,9 +7317,23 @@
     },
     "expiryDate": "1693744736",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1662187784"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "88188.doge",
+      "owner": {
+        "id": "0xf938097bd64b0f9c969983b361a07edfe9143552"
+      }
+    },
+    "expiryDate": "1694274744",
+    "registrant": {
+      "id": "0xf938097bd64b0f9c969983b361a07edfe9143552"
+    },
+    "registrationDate": "1662717792"
   },
   {
     "cost": "100000003168849933296",
@@ -7247,7 +7611,7 @@
     },
     "expiryDate": "1693561220",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1662004268"
   },
@@ -7616,6 +7980,20 @@
     "registrationDate": "1661828190"
   },
   {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "bl3zzyy.doge",
+      "owner": {
+        "id": "0xdfe4c5b9272810f4119564e4b064f6b81f8e059c"
+      }
+    },
+    "expiryDate": "1694282220",
+    "registrant": {
+      "id": "0xdfe4c5b9272810f4119564e4b064f6b81f8e059c"
+    },
+    "registrationDate": "1662725268"
+  },
+  {
     "cost": "300000009506549799888",
     "domain": {
       "name": "autobark.doge",
@@ -7894,6 +8272,20 @@
       "id": "0x2f37762456f82facc2cec917e4df60f953b2a8ad"
     },
     "registrationDate": "1661829630"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "77500.doge",
+      "owner": {
+        "id": "0x849a5d704a11ad207ffe2b480867d4728a807ca6"
+      }
+    },
+    "expiryDate": "1694274304",
+    "registrant": {
+      "id": "0x849a5d704a11ad207ffe2b480867d4728a807ca6"
+    },
+    "registrationDate": "1662717352"
   },
   {
     "cost": "1000000031688720231624",
@@ -8274,6 +8666,20 @@
     "registrationDate": "1661798094"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "oly4life.doge",
+      "owner": {
+        "id": "0x35591ff183d8320acfa607ca0e4f03a396a9707c"
+      }
+    },
+    "expiryDate": "1694277924",
+    "registrant": {
+      "id": "0x35591ff183d8320acfa607ca0e4f03a396a9707c"
+    },
+    "registrationDate": "1662720972"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "brent.doge",
@@ -8540,6 +8946,20 @@
     "registrationDate": "1661521824"
   },
   {
+    "cost": "180000005703917257152",
+    "domain": {
+      "name": "rhamzy.doge",
+      "owner": {
+        "id": "0x6858c3ed70e40279e60592f55c680243434b75d6"
+      }
+    },
+    "expiryDate": "1725833384",
+    "registrant": {
+      "id": "0x6858c3ed70e40279e60592f55c680243434b75d6"
+    },
+    "registrationDate": "1662719480"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "tokens.doge",
@@ -8708,6 +9128,20 @@
     "registrationDate": "1661207155"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "santi.doge",
+      "owner": {
+        "id": "0x309d107e9117059a58fc6d597968f6c64bb656f4"
+      }
+    },
+    "expiryDate": "1694278588",
+    "registrant": {
+      "id": "0x309d107e9117059a58fc6d597968f6c64bb656f4"
+    },
+    "registrationDate": "1662721636"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "metamask.doge",
@@ -8731,7 +9165,7 @@
     },
     "expiryDate": "1693403510",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661846558"
   },
@@ -8748,6 +9182,20 @@
       "id": "0x38dfe6658b46e1b8394434944a5ca93abbb1b498"
     },
     "registrationDate": "1661243237"
+  },
+  {
+    "cost": "180000005703917257152",
+    "domain": {
+      "name": "evmos.doge",
+      "owner": {
+        "id": "0xd16bdde3c4388e90e3f640896c9b92f28a71bf08"
+      }
+    },
+    "expiryDate": "1725835624",
+    "registrant": {
+      "id": "0xd16bdde3c4388e90e3f640896c9b92f28a71bf08"
+    },
+    "registrationDate": "1662721720"
   },
   {
     "cost": "100000003168849933296",
@@ -8930,6 +9378,20 @@
       "id": "0xa9cc5c0a9c05fe991747daad8a3dcf2758570359"
     },
     "registrationDate": "1662684391"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "quasars.doge",
+      "owner": {
+        "id": "0xb8a5674cda2756326075aa17e5def50b539251b3"
+      }
+    },
+    "expiryDate": "1694273604",
+    "registrant": {
+      "id": "0xb8a5674cda2756326075aa17e5def50b539251b3"
+    },
+    "registrationDate": "1662716652"
   },
   {
     "cost": "100000003168849933296",
@@ -9193,7 +9655,7 @@
     },
     "expiryDate": "1693402650",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661845698"
   },
@@ -9408,6 +9870,20 @@
     "registrationDate": "1661200471"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "cryptodon.doge",
+      "owner": {
+        "id": "0xe3f9959a15d5487bf8aa62fec3ec12bc16bd931f"
+      }
+    },
+    "expiryDate": "1694275976",
+    "registrant": {
+      "id": "0xe3f9959a15d5487bf8aa62fec3ec12bc16bd931f"
+    },
+    "registrationDate": "1662719024"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "696969.doge",
@@ -9576,6 +10052,20 @@
     "registrationDate": "1661536074"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "addme.doge",
+      "owner": {
+        "id": "0xea1797e99c2daf4d99b325b9826b5ded7f29b9f0"
+      }
+    },
+    "expiryDate": "1694277828",
+    "registrant": {
+      "id": "0xea1797e99c2daf4d99b325b9826b5ded7f29b9f0"
+    },
+    "registrationDate": "1662720876"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "web420.doge",
@@ -9616,6 +10106,20 @@
       "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661675776"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "19999.doge",
+      "owner": {
+        "id": "0x85fb7a773ae571c907283fa68277a86a8c53187b"
+      }
+    },
+    "expiryDate": "1694278380",
+    "registrant": {
+      "id": "0x85fb7a773ae571c907283fa68277a86a8c53187b"
+    },
+    "registrationDate": "1662721428"
   },
   {
     "cost": "200000006337699866592",
@@ -9826,6 +10330,34 @@
       "id": "0xd4303a7ede69c3657f37634cb981ba8c9d765021"
     },
     "registrationDate": "1661530560"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "habilisl.doge",
+      "owner": {
+        "id": "0x491657f0b1e70fb175b3d079b26ecc962affea6c"
+      }
+    },
+    "expiryDate": "1694281404",
+    "registrant": {
+      "id": "0x491657f0b1e70fb175b3d079b26ecc962affea6c"
+    },
+    "registrationDate": "1662724452"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "paapi.doge",
+      "owner": {
+        "id": "0x442881911e2a08b8688d225558dc93950288bb45"
+      }
+    },
+    "expiryDate": "1694282444",
+    "registrant": {
+      "id": "0x442881911e2a08b8688d225558dc93950288bb45"
+    },
+    "registrationDate": "1662725492"
   },
   {
     "cost": "1000000031688720231624",
@@ -10164,6 +10696,20 @@
     "registrationDate": "1662648932"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "davidex.doge",
+      "owner": {
+        "id": "0xd912f5fa792a61b9a1ce13969d084d44ea63ad30"
+      }
+    },
+    "expiryDate": "1694279998",
+    "registrant": {
+      "id": "0xd912f5fa792a61b9a1ce13969d084d44ea63ad30"
+    },
+    "registrationDate": "1662723046"
+  },
+  {
     "cost": "18999997813472410360",
     "domain": {
       "name": "nintendo.doge",
@@ -10402,6 +10948,20 @@
     "registrationDate": "1661239869"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "16161.doge",
+      "owner": {
+        "id": "0xa8b4baa614e4af59e78afd60accd14edc459c646"
+      }
+    },
+    "expiryDate": "1694274954",
+    "registrant": {
+      "id": "0xa8b4baa614e4af59e78afd60accd14edc459c646"
+    },
+    "registrationDate": "1662718002"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "validator.doge",
@@ -10512,6 +11072,20 @@
       "id": "0x774dda5992f1769ff4576a06c6dd90f67f934e6c"
     },
     "registrationDate": "1661856660"
+  },
+  {
+    "cost": "240000007605296642424",
+    "domain": {
+      "name": "smallgambler.doge",
+      "owner": {
+        "id": "0x35ab74207c7fed34a1147a4c1ab82742aab21634"
+      }
+    },
+    "expiryDate": "1757395748",
+    "registrant": {
+      "id": "0x35ab74207c7fed34a1147a4c1ab82742aab21634"
+    },
+    "registrationDate": "1662724892"
   },
   {
     "cost": "0",
@@ -10668,6 +11242,20 @@
     "registrationDate": "1661194779"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "tyb2452.doge",
+      "owner": {
+        "id": "0x9986cda2891e7963cc75f50fc4bb360b47a85fab"
+      }
+    },
+    "expiryDate": "1694273154",
+    "registrant": {
+      "id": "0x9986cda2891e7963cc75f50fc4bb360b47a85fab"
+    },
+    "registrationDate": "1662716202"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "01234.doge",
@@ -10775,7 +11363,7 @@
     },
     "expiryDate": "1693404522",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661847570"
   },
@@ -10890,6 +11478,20 @@
       "id": "0x4461b8a3a3e4aee3c2679fbef442cf1865c450b2"
     },
     "registrationDate": "1662038114"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "youtuber.doge",
+      "owner": {
+        "id": "0x85b1b7d7472eb9d05cd9835db94befbd34f26a13"
+      }
+    },
+    "expiryDate": "1694274410",
+    "registrant": {
+      "id": "0x85b1b7d7472eb9d05cd9835db94befbd34f26a13"
+    },
+    "registrationDate": "1662717458"
   },
   {
     "cost": "100000003168849933296",
@@ -11307,7 +11909,7 @@
     },
     "expiryDate": "1693465218",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1661908266"
   },
@@ -11377,7 +11979,7 @@
     },
     "expiryDate": "1693404098",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661847146"
   },
@@ -11615,7 +12217,7 @@
     },
     "expiryDate": "1693402506",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661845554"
   },
@@ -11660,6 +12262,20 @@
       "id": "0xbb454338e2bbfea60f9b53d9d4f0574386814978"
     },
     "registrationDate": "1662645867"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "00666.doge",
+      "owner": {
+        "id": "0x27cd99978c5aa2473ac8a8f1a5b6d2989b8e5acb"
+      }
+    },
+    "expiryDate": "1694274146",
+    "registrant": {
+      "id": "0x27cd99978c5aa2473ac8a8f1a5b6d2989b8e5acb"
+    },
+    "registrationDate": "1662717194"
   },
   {
     "cost": "100000003168849933296",
@@ -12399,7 +13015,7 @@
     },
     "expiryDate": "1693402928",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661845976"
   },
@@ -12964,6 +13580,20 @@
     "registrationDate": "1661641994"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "shibkilla.doge",
+      "owner": {
+        "id": "0x08193554bf75e24f5e4a3c9f31da4c9503b682cb"
+      }
+    },
+    "expiryDate": "1694277800",
+    "registrant": {
+      "id": "0x08193554bf75e24f5e4a3c9f31da4c9503b682cb"
+    },
+    "registrationDate": "1662720848"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "60000.doge",
@@ -13074,6 +13704,20 @@
       "id": "0x147ef3a8a05ef25ff4d8d605b43e9322c3d43a7a"
     },
     "registrationDate": "1662675434"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "blades.doge",
+      "owner": {
+        "id": "0xac3dea9ac0999718e7f9015521417a15c2a90011"
+      }
+    },
+    "expiryDate": "1694273110",
+    "registrant": {
+      "id": "0xac3dea9ac0999718e7f9015521417a15c2a90011"
+    },
+    "registrationDate": "1662716158"
   },
   {
     "cost": "100000003168849933296",
@@ -13547,7 +14191,7 @@
     },
     "expiryDate": "1693405686",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661848734"
   },
@@ -13617,7 +14261,7 @@
     },
     "expiryDate": "1693403718",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661846766"
   },
@@ -13967,7 +14611,7 @@
     },
     "expiryDate": "1693232900",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661675948"
   },
@@ -14348,6 +14992,20 @@
       "id": "0x43cc59434703418883ab6a0959724eeae3ef3817"
     },
     "registrationDate": "1662678518"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "ominimagic.doge",
+      "owner": {
+        "id": "0xcc8366a33118f219d99694ecd8a7934a2c81a5d2"
+      }
+    },
+    "expiryDate": "1694283480",
+    "registrant": {
+      "id": "0xcc8366a33118f219d99694ecd8a7934a2c81a5d2"
+    },
+    "registrationDate": "1662726528"
   },
   {
     "cost": "100000003168849933296",
@@ -14905,7 +15563,7 @@
     },
     "expiryDate": "1693561822",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1662004870"
   },
@@ -15146,6 +15804,20 @@
       "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
     },
     "registrationDate": "1661852424"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "retweet.doge",
+      "owner": {
+        "id": "0xbd46e71093ddde41ee3163d7205bba51ed4c8d58"
+      }
+    },
+    "expiryDate": "1694275282",
+    "registrant": {
+      "id": "0xbd46e71093ddde41ee3163d7205bba51ed4c8d58"
+    },
+    "registrationDate": "1662718330"
   },
   {
     "cost": "100000003168849933296",
@@ -15538,6 +16210,20 @@
       "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
     },
     "registrationDate": "1661502787"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "18888.doge",
+      "owner": {
+        "id": "0x068dac96e504798518297f22e7226115d34b8c7f"
+      }
+    },
+    "expiryDate": "1694276944",
+    "registrant": {
+      "id": "0x068dac96e504798518297f22e7226115d34b8c7f"
+    },
+    "registrationDate": "1662719992"
   },
   {
     "cost": "100000003168849933296",
@@ -16240,6 +16926,20 @@
     "registrationDate": "1661239759"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "bigdee.doge",
+      "owner": {
+        "id": "0x4228cf40f19122bbcb5abf082653878971182fa7"
+      }
+    },
+    "expiryDate": "1694275678",
+    "registrant": {
+      "id": "0x4228cf40f19122bbcb5abf082653878971182fa7"
+    },
+    "registrationDate": "1662718726"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "clone.doge",
@@ -16459,7 +17159,7 @@
     },
     "expiryDate": "1693405774",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661848822"
   },
@@ -16728,6 +17428,20 @@
       "id": "0xe56ce76caed8f7a06f8d07d27840b50956fe998f"
     },
     "registrationDate": "1661707736"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "cosmos.doge",
+      "owner": {
+        "id": "0xcf486e7a0c7d6b0bf4e3b9fea73524ce2ce3195a"
+      }
+    },
+    "expiryDate": "1694273864",
+    "registrant": {
+      "id": "0xcf486e7a0c7d6b0bf4e3b9fea73524ce2ce3195a"
+    },
+    "registrationDate": "1662716912"
   },
   {
     "cost": "100000003168849933296",
@@ -17164,6 +17878,20 @@
     "registrationDate": "1661206869"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "16666.doge",
+      "owner": {
+        "id": "0xa644b76bfda79c76cac5b98ed0c4bd7a79f5274f"
+      }
+    },
+    "expiryDate": "1694276792",
+    "registrant": {
+      "id": "0xa644b76bfda79c76cac5b98ed0c4bd7a79f5274f"
+    },
+    "registrationDate": "1662719840"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "login.doge",
@@ -17390,6 +18118,20 @@
   {
     "cost": "90000002851958628576",
     "domain": {
+      "name": "11888.doge",
+      "owner": {
+        "id": "0xa495893ceb72ae222d1e34d2dc1872b83c47d5fa"
+      }
+    },
+    "expiryDate": "1694279638",
+    "registrant": {
+      "id": "0xa495893ceb72ae222d1e34d2dc1872b83c47d5fa"
+    },
+    "registrationDate": "1662722686"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
       "name": "samoye.doge",
       "owner": {
         "id": "0x74b7e6d4336df8038a44393cac5b7ac53fd75c7a"
@@ -17428,6 +18170,20 @@
       "id": "0xb97176276b93980a659bb54b3243364e2a8c4d21"
     },
     "registrationDate": "1661788604"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "superior.doge",
+      "owner": {
+        "id": "0x642f335dc61b0323f95906425ac6821695e86c90"
+      }
+    },
+    "expiryDate": "1694277624",
+    "registrant": {
+      "id": "0x642f335dc61b0323f95906425ac6821695e86c90"
+    },
+    "registrationDate": "1662720672"
   },
   {
     "cost": "100000003168849933296",
@@ -17607,7 +18363,7 @@
     },
     "expiryDate": "1693403474",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661846522"
   },
@@ -18074,6 +18830,20 @@
     "registrationDate": "1661743310"
   },
   {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "alkatsinawy1.doge",
+      "owner": {
+        "id": "0x98e60c7e0d9b74b745a74fd85b9c05d9efbdf8a7"
+      }
+    },
+    "expiryDate": "1694282244",
+    "registrant": {
+      "id": "0x98e60c7e0d9b74b745a74fd85b9c05d9efbdf8a7"
+    },
+    "registrationDate": "1662725292"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "nathan.doge",
@@ -18100,6 +18870,20 @@
       "id": "0x32ed826afa5fd4c6098367c08601f076cfa342f5"
     },
     "registrationDate": "1661965584"
+  },
+  {
+    "cost": "900000028519838741376",
+    "domain": {
+      "name": "pump.doge",
+      "owner": {
+        "id": "0xb03a8ede596411a09fbbc288e856309eca344058"
+      }
+    },
+    "expiryDate": "1694277128",
+    "registrant": {
+      "id": "0xb03a8ede596411a09fbbc288e856309eca344058"
+    },
+    "registrationDate": "1662720176"
   },
   {
     "cost": "200000006337699866592",
@@ -18142,6 +18926,20 @@
       "id": "0x5ed504a5970f1415e7d689a339719f0f2576ec50"
     },
     "registrationDate": "1661908014"
+  },
+  {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "names.doge",
+      "owner": {
+        "id": "0x68c8dc58ad4e9faff6a1a92a08f541c337eecea7"
+      }
+    },
+    "expiryDate": "1694278230",
+    "registrant": {
+      "id": "0x68c8dc58ad4e9faff6a1a92a08f541c337eecea7"
+    },
+    "registrationDate": "1662721278"
   },
   {
     "cost": "100000003168849933296",
@@ -18293,9 +19091,23 @@
     },
     "expiryDate": "1693234236",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661677284"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "elon69.doge",
+      "owner": {
+        "id": "0xaec8af2832470178a6db5731b871aefd8233f0eb"
+      }
+    },
+    "expiryDate": "1694283514",
+    "registrant": {
+      "id": "0xaec8af2832470178a6db5731b871aefd8233f0eb"
+    },
+    "registrationDate": "1662726562"
   },
   {
     "cost": "100000003168849933296",
@@ -18396,6 +19208,20 @@
     "registrationDate": "1662680912"
   },
   {
+    "cost": "90000002851958628576",
+    "domain": {
+      "name": "22822.doge",
+      "owner": {
+        "id": "0xcb1a087cc3f620584996bf8915eb84a95e553d14"
+      }
+    },
+    "expiryDate": "1694278430",
+    "registrant": {
+      "id": "0xcb1a087cc3f620584996bf8915eb84a95e553d14"
+    },
+    "registrationDate": "1662721478"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "profile.doge",
@@ -18405,7 +19231,7 @@
     },
     "expiryDate": "1693387948",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661830996"
   },
@@ -18797,7 +19623,7 @@
     },
     "expiryDate": "1693402780",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661845828"
   },
@@ -18895,7 +19721,7 @@
     },
     "expiryDate": "1693403384",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661846432"
   },
@@ -19469,7 +20295,7 @@
     },
     "expiryDate": "1693402254",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661845302"
   },
@@ -19542,6 +20368,20 @@
       "id": "0xb0c5768237ce79987011defdf04d3ec553b4aa03"
     },
     "registrationDate": "1662682870"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "play2earn.doge",
+      "owner": {
+        "id": "0xaec8af2832470178a6db5731b871aefd8233f0eb"
+      }
+    },
+    "expiryDate": "1694283370",
+    "registrant": {
+      "id": "0xaec8af2832470178a6db5731b871aefd8233f0eb"
+    },
+    "registrationDate": "1662726418"
   },
   {
     "cost": "100000003168849933296",
@@ -19908,6 +20748,20 @@
     "registrationDate": "1662093916"
   },
   {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "darius.doge",
+      "owner": {
+        "id": "0x4228cf40f19122bbcb5abf082653878971182fa7"
+      }
+    },
+    "expiryDate": "1694281282",
+    "registrant": {
+      "id": "0x4228cf40f19122bbcb5abf082653878971182fa7"
+    },
+    "registrationDate": "1662724330"
+  },
+  {
     "cost": "100000003168849933296",
     "domain": {
       "name": "space1.doge",
@@ -20169,7 +21023,7 @@
     },
     "expiryDate": "1693302716",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661745764"
   },
@@ -20379,7 +21233,7 @@
     },
     "expiryDate": "1693436332",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0xcc66ef46e77dd29c210a9f20dc2f85c3fdd07b66"
     },
     "registrationDate": "1661879380"
   },
@@ -20407,7 +21261,7 @@
     },
     "expiryDate": "1665007223",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x00000097c39b9eb0a2bd578b289278071edd8ab4"
     },
     "registrationDate": "1661851528"
   },
@@ -20883,7 +21737,7 @@
     },
     "expiryDate": "1693233924",
     "registrant": {
-      "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
+      "id": "0x8de58df310b51857ed0afa6629b987b0f93c6905"
     },
     "registrationDate": "1661676972"
   },
@@ -20914,6 +21768,20 @@
       "id": "0x3e79c89f479824bc24b9ead73eb8c55f322fe963"
     },
     "registrationDate": "1661757674"
+  },
+  {
+    "cost": "80000002535098880808",
+    "domain": {
+      "name": "shabzy.doge",
+      "owner": {
+        "id": "0x354faeb405d4834cacb732d3663b6e63afd7ac36"
+      }
+    },
+    "expiryDate": "1694280508",
+    "registrant": {
+      "id": "0x354faeb405d4834cacb732d3663b6e63afd7ac36"
+    },
+    "registrationDate": "1662723556"
   },
   {
     "cost": "100000003168849933296",
