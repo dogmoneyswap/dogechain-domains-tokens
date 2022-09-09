@@ -32,6 +32,8 @@ const getHolders = async () => {
     registrations = [...registrations, ...json.data.registrations];
   }
 
+  writeFileSync("./dnsRegistrations.json", JSON.stringify(registrations, null, 2))
+
   for (let registration of registrations) {
     const domain = registration.domain;
     const years = Math.round(1000 * (parseInt(registration.expiryDate) - parseInt(registration.registrationDate)) / 31556951) / 1000
