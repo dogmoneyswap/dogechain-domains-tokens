@@ -56,15 +56,19 @@ for (const [addr, bal] of Object.entries(xlnsholders)) {
 
 // console.log(holders)
 
+console.log('#!/bin/bash');
+console.log('set -x');
+console.log();
+
 const totalBalance = Object.entries(holders).reduce((a, v) => a.plus(v[1]), new BN(0));
 for (const [addr, bal] of Object.entries(holders)) {
-    const amnt = bal.dividedBy(totalBalance).multipliedBy(AIRDROP_AMOUNT).dividedBy(1e18).toFixed(18);
+    const amnt = bal.dividedBy(totalBalance).multipliedBy(AIRDROP_AMOUNT);
     holders[addr] = amnt;
-    console.log(`erc20,0xE6bBD3B28C14bf325b91203De60aF2458DBFc5b6,${addr},${amnt},`)
+    // console.log(`erc20,0xE6bBD3B28C14bf325b91203De60aF2458DBFc5b6,${addr},${amnt},`)
     // console.log(addr, holders[addr].toFixed())
-    // console.log(`npx hardhat --network dogechain erc20:transfer --recipient "${addr}" --token "0xe729ffC468e309F8d68bE26026C7A442D84caf2D" --amount "${bal.toFixed()}"`)
+    console.log(`npx hardhat --network dogechain erc20:transfer --recipient "${addr}" --token "0xE6bBD3B28C14bf325b91203De60aF2458DBFc5b6" --amount "${amnt.toFixed()}"`)
 }
-const totalToSend = Object.entries(holders).reduce((a, v) => a.plus(v[1]), new BN(0));
-console.log(totalToSend.toString())
+// const totalToSend = Object.entries(holders).reduce((a, v) => a.plus(v[1]), new BN(0));
+// console.log(totalToSend.dividedBy(1e18).toString())
 
 // console.log(holders);
